@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore all tourist destinations in Ilocos Norte, Philippines.">
+  <title>All Destinations — Ilocos Norte</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="loading-screen">
+  <div class="loader-logo">Ilocos <span>Norte</span></div>
+  <div class="loader-sub">Crown of the North</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+<div class="page-transition"></div>
+<canvas id="particles-canvas"></canvas>
+<div id="progress-bar"></div>
+
+<header class="site-header">
+  <div class="header-top-bar">
+    <div class="container-fluid px-4">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="header-contact-info">
+          <span><i class="fas fa-phone"></i>+63 77 771 3000</span>
+          <span class="d-none d-md-inline"><i class="fas fa-envelope"></i>tourism@ilocosnorte.gov.ph</span>
+        </div>
+        <div class="d-flex gap-3" style="font-size:12px;color:rgba(255,255,255,0.5);">
+          <a href="#" style="color:rgba(255,255,255,0.5)"><i class="fab fa-facebook"></i></a>
+          <a href="#" style="color:rgba(255,255,255,0.5)"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="main-navbar navbar navbar-expand-lg">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="index.html">
+        <div class="logo-icon"><i class="fas fa-compass" style="color:#fff"></i></div>
+        <div class="logo-text-wrap">
+          <span class="logo-title">Ilocos Norte</span>
+          <span class="logo-sub">Philippines</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-expanded="false">
+        <div class="hamburger-lines"><span></span><span></span><span></span></div>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item dropdown">
+        <a class="nav-link active dropdown-toggle" href="destinations.html" data-bs-toggle="dropdown">Destinations</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="destinations.html">All Destinations</a></li>
+          <li><a class="dropdown-item" href="beaches.html">Beaches</a></li>
+          <li><a class="dropdown-item" href="heritage.html">Heritage Sites</a></li>
+          <li><a class="dropdown-item" href="adventure.html">Adventure</a></li>
+          <li><a class="dropdown-item" href="spot-detail.html">Spot Details</a></li>
+        </ul>
+      </li><li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="festivals.html" data-bs-toggle="dropdown">Culture</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="festivals.html">Festivals</a></li>
+          <li><a class="dropdown-item" href="food.html">Food &amp; Cuisine</a></li>
+          <li><a class="dropdown-item" href="gallery.html">Photo Gallery</a></li>
+          <li><a class="dropdown-item" href="video-gallery.html">Video Gallery</a></li>
+        </ul>
+      </li><li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="travel-guide.html" data-bs-toggle="dropdown">Travel</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="travel-guide.html">Travel Guide</a></li>
+          <li><a class="dropdown-item" href="hotels.html">Hotels &amp; Resorts</a></li>
+          <li><a class="dropdown-item" href="transportation.html">Transportation</a></li>
+          <li><a class="dropdown-item" href="tourist-map.html">Tourist Map</a></li>
+          <li><a class="dropdown-item" href="plan-trip.html">Plan Your Trip</a></li>
+        </ul>
+      </li><li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="events.html" data-bs-toggle="dropdown">News</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="events.html">Events</a></li>
+          <li><a class="dropdown-item" href="news.html">News &amp; Updates</a></li>
+        </ul>
+      </li><li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-auth-btns">
+          <label class="dark-toggle-wrap">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="dark-toggle-track"></span>
+          </label>
+          <a href="signin.html" class="btn-nav-signin">Sign In</a>
+          <a href="signup.html" class="btn-nav-signup">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('images/bangui-windmills.jpg');background-color:#0a2a4a;"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="container-fluid px-4 px-md-5">
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow"><i class="fas fa-map-marked-alt me-2"></i>Explore the Province</span>
+      <h1 class="page-hero-title">All <span class="accent">Destinations</span></h1>
+      <p class="page-hero-subtitle">From windswept coasts to UNESCO churches — discover every iconic spot in Ilocos Norte.</p>
+    </div>
+  </div>
+</section>
+<div class="site-breadcrumb">
+  <div class="container-fluid px-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        
+        <li class="breadcrumb-item active">Destinations</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section class="section-pad section-dark">
+  <div class="container-fluid px-4 px-md-5">
+    <!-- Search -->
+    <div class="search-bar-wrap fade-in">
+      <input type="text" id="dest-search" class="search-bar-input" placeholder="Search destinations...">
+      <i class="fas fa-search search-bar-icon"></i>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="d-flex justify-content-center mb-5 fade-in" data-tab-group>
+      <div class="custom-tabs">
+        <button class="custom-tab active" data-tab="all">All</button>
+        <button class="custom-tab" data-tab="heritage">Heritage</button>
+        <button class="custom-tab" data-tab="nature">Nature</button>
+        <button class="custom-tab" data-tab="beach">Beaches</button>
+        <button class="custom-tab" data-tab="adventure">Adventure</button>
+      </div>
+    </div>
+
+    <div class="row g-4" id="dest-grid">
+      <!-- Paoay Church -->
+      <div class="col-lg-4 col-md-6 fade-in filterable-card" data-category="heritage">
+        <div class="dest-card tilt-card">
+          <div class="tilt-card-shine"></div>
+          <div class="dest-card-img" style="background-image:url('images/paoay-church.jpg');background-color:#3a2a10;"></div>
+          <div class="dest-card-overlay"></div>
+          <div class="dest-card-body">
+            <span class="dest-card-tag"><i class="fas fa-landmark me-1"></i>UNESCO Heritage · Paoay</span>
+            <h3 class="dest-card-title">Paoay Church</h3>
+            <p class="dest-card-desc">A UNESCO World Heritage Site and masterpiece of Earthquake Baroque architecture, built in 1704. Its massive coral stone buttresses are unlike any structure in the Philippines.</p>
+            <a href="heritage.html" class="dest-card-link">Discover More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bangui Windmills -->
+      <div class="col-lg-4 col-md-6 fade-in filterable-card" data-category="nature">
+        <div class="dest-card tilt-card">
+          <div class="tilt-card-shine"></div>
+          <div class="dest-card-img" style="background-image:url('images/bangui-windmills.jpg');background-color:#0a3a5c;"></div>
+          <div class="dest-card-overlay"></div>
+          <div class="dest-card-body">
+            <span class="dest-card-tag"><i class="fas fa-wind me-1"></i>Landmark · Bangui</span>
+            <h3 class="dest-card-title">Bangui Windmills</h3>
+            <p class="dest-card-desc">20 towering wind turbines stretching along Bangui Bay's black-sand shore — a hypnotic, surreal, and entirely unique Philippine landscape.</p>
+            <a href="spot-detail.html" class="dest-card-link">Discover More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kapurpurawan -->
+      <div class="col-lg-4 col-md-6 fade-in filterable-card" data-category="nature">
+        <div class="dest-card tilt-card">
+          <div class="tilt-card-shine"></div>
+          <div class="dest-card-img" style="background-image:url('images/kapurpurawan.jpg');background-color:#1a3a5a;"></div>
+          <div class="dest-card-overlay"></div>
+          <div class="dest-card-body">
+            <span class="dest-card-tag"><i class="fas fa-mountain me-1"></i>Rock Formation · Burgos</span>
+            <h3 class="dest-card-title">Kapurpurawan Rock Formation</h3>
+            <p class="dest-card-desc">Dazzling white rock formations carved by wind and sea over millennia. Only accessible at low tide — a surreal, otherworldly landscape on the northern coast.</p>
+            <a href="spot-detail.html" class="dest-card-link">Discover More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Saud Beach -->
+      <div class="col-lg-4 col-md-6 fade-in filterable-card" data-category="beach">
+        <div class="dest-card tilt-card">
+          <div class="tilt-card-shine"></div>
+          <div class="dest-card-img" style="background-image:url('images/saud-beach.jpg');background-color:#0a4a3c;"></div>
+          <div class="dest-card-overlay"></div>
+          <div class="dest-card-body">
+            <span class="dest-card-tag"><i class="fas fa-umbrella-beach me-1"></i>Beach · Pagudpud</span>
+            <h3 class="dest-card-title">Saud Beach</h3>
+            <p class="dest-card-desc">Powdery white sand, crystal-blue waters, and gentle waves. Known as the "Boracay of the North," Saud Beach is Ilocos Norte's most celebrated coastal escape.</p>
+            <a href="beaches.html" class="dest-card-link">Discover More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cape Bojeador Lighthouse -->
+      <div class="col-lg-4 col-md-6 fade-in filterable-card" data-category="heritage">
+        <div class="dest-card tilt-card">
+          <div class="tilt-card-shine"></div>
+          <div class="dest-card-img" style="background-image:url('images/cape-bojeador.jpg');background-color:#0a1a3c;"></div>
+          <div class="dest-card-overlay"></div>
+          <div class="dest-card-body">
+            <span class="dest-card-tag"><i class="fas fa-broadcast-tower me-1"></i>Lighthouse · Burgos</span>
+            <h3 class="dest-card-title">Cape Bojeador Lighthouse</h3>
+            <p class="dest-card-desc">Built in 1892, this octagonal brick lighthouse perches on a hill above the South China Sea, offering sweeping panoramic views of the northern Philippine coast.</p>
+            <a href="spot-detail.html" class="dest-card-link">Discover More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Laoag Sand Dunes -->
+      <div class="col-lg-4 col-md-6 fade-in filterable-card" data-category="adventure">
+        <div class="dest-card tilt-card">
+          <div class="tilt-card-shine"></div>
+          <div class="dest-card-img" style="background-image:url('images/sand-dunes.jpg');background-color:#3a2a0a;"></div>
+          <div class="dest-card-overlay"></div>
+          <div class="dest-card-body">
+            <span class="dest-card-tag"><i class="fas fa-mountain me-1"></i>Adventure · Laoag</span>
+            <h3 class="dest-card-title">La Paz Sand Dunes</h3>
+            <p class="dest-card-desc">A vast desert-like expanse of sand dunes rising near Laoag City — the largest sand dunes in the Philippines, perfect for 4x4 rides and sandboarding.</p>
+            <a href="adventure.html" class="dest-card-link">Discover More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blue Lagoon -->
+      <div class="col-lg-4 col-md-6 fade-in filterable-card" data-category="beach">
+        <div class="dest-card tilt-card">
+          <div class="tilt-card-shine"></div>
+          <div class="dest-card-img" style="background-image:url('images/blue-lagoon.jpg');background-color:#0a3a4a;"></div>
+          <div class="dest-card-overlay"></div>
+          <div class="dest-card-body">
+            <span class="dest-card-tag"><i class="fas fa-water me-1"></i>Lagoon · Pagudpud</span>
+            <h3 class="dest-card-title">Blue Lagoon</h3>
+            <p class="dest-card-desc">A serene cove with impossibly clear turquoise waters tucked between dramatic coastal cliffs. One of the most scenic swimming spots in Northern Luzon.</p>
+            <a href="beaches.html" class="dest-card-link">Discover More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Laoag City -->
+      <div class="col-lg-4 col-md-6 fade-in filterable-card" data-category="heritage">
+        <div class="dest-card tilt-card">
+          <div class="tilt-card-shine"></div>
+          <div class="dest-card-img" style="background-image:url('images/laoag-city.jpg');background-color:#1a2a4a;"></div>
+          <div class="dest-card-overlay"></div>
+          <div class="dest-card-body">
+            <span class="dest-card-tag"><i class="fas fa-city me-1"></i>Capital · Laoag</span>
+            <h3 class="dest-card-title">Laoag City</h3>
+            <p class="dest-card-desc">The proud capital of Ilocos Norte — a city where colonial-era bell towers, modern malls, the famous sand dunes, and the warmth of Ilocano hospitality converge.</p>
+            <a href="spot-detail.html" class="dest-card-link">Discover More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timmangtang Rock -->
+      <div class="col-lg-4 col-md-6 fade-in filterable-card" data-category="nature">
+        <div class="dest-card tilt-card">
+          <div class="tilt-card-shine"></div>
+          <div class="dest-card-img" style="background-image:url('images/timmangtang.jpg');background-color:#0a3a2a;"></div>
+          <div class="dest-card-overlay"></div>
+          <div class="dest-card-body">
+            <span class="dest-card-tag"><i class="fas fa-mountain me-1"></i>Rock Formation · Adams</span>
+            <h3 class="dest-card-title">Timmangtang Rock</h3>
+            <p class="dest-card-desc">A dramatic rock formation rising from the mountains of Adams — accessible via a thrilling hike through verdant forests and swift rivers. A true adventurer's reward.</p>
+            <a href="adventure.html" class="dest-card-link">Discover More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="no-results" class="no-results-msg">No destinations found matching your search.</div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-brand mb-4">
+            <div class="footer-logo-title mb-2">Ilocos <span>Norte</span></div>
+            <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:12px;">Crown of the North</div>
+            <p>Heritage, nature, culture, and the warmth of the Ilocano people await you in the Philippine Northwest.</p>
+          </div>
+          <div class="footer-social">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Explore</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="beaches.html">Beaches</a></li>
+            <li><a href="heritage.html">Heritage Sites</a></li>
+            <li><a href="adventure.html">Adventure</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Culture</div>
+          <ul class="footer-links">
+            <li><a href="festivals.html">Festivals</a></li>
+            <li><a href="food.html">Food &amp; Cuisine</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="video-gallery.html">Videos</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Travel</div>
+          <ul class="footer-links">
+            <li><a href="travel-guide.html">Travel Guide</a></li>
+            <li><a href="hotels.html">Hotels &amp; Resorts</a></li>
+            <li><a href="transportation.html">Transportation</a></li>
+            <li><a href="tourist-map.html">Tourist Map</a></li>
+            <li><a href="plan-trip.html">Plan Your Trip</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+          </ul>
+          <div class="mt-4" style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.9;">
+            <i class="fas fa-phone me-2" style="color:var(--sky);"></i>+63 77 771 3000<br>
+            <i class="fas fa-envelope me-2" style="color:var(--sky);"></i>tourism@ilocosnorte.gov.ph
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container-fluid px-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>&copy; 2026 Ilocos Norte Tourism &middot; <a href="#">Privacy Policy</a> &middot; <a href="#">Terms</a></span>
+        <span>Built with <i class="fas fa-heart" style="color:var(--sunset);"></i> &middot; BSIS II-A &middot; CTU Main</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="lightbox-overlay">
+  <button id="lightbox-close"><i class="fas fa-times"></i></button>
+  <button id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+  <img id="lightbox-img" src="" alt="">
+  <button id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+</div>
+<button id="back-to-top" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+<div id="cookie-banner">
+  <p><i class="fas fa-cookie-bite"></i> We use cookies to enhance your experience exploring Ilocos Norte.</p>
+  <div class="cookie-btns"><button id="cookie-accept">Accept All</button><button id="cookie-decline">Decline</button></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

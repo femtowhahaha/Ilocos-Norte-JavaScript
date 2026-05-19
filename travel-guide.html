@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Everything you need to know to plan a trip to Ilocos Norte, Philippines.">
+  <title>Travel Guide — Ilocos Norte</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="loading-screen">
+  <div class="loader-logo">Ilocos <span>Norte</span></div>
+  <div class="loader-sub">Crown of the North</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+<div class="page-transition"></div>
+<canvas id="particles-canvas"></canvas>
+<div id="progress-bar"></div>
+
+<header class="site-header">
+  <div class="header-top-bar">
+    <div class="container-fluid px-4">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="header-contact-info">
+          <span><i class="fas fa-phone"></i>+63 77 771 3000</span>
+          <span class="d-none d-md-inline"><i class="fas fa-envelope"></i>tourism@ilocosnorte.gov.ph</span>
+        </div>
+        <div class="d-flex gap-3" style="font-size:12px;color:rgba(255,255,255,0.5);">
+          <a href="#" style="color:rgba(255,255,255,0.5)"><i class="fab fa-facebook"></i></a>
+          <a href="#" style="color:rgba(255,255,255,0.5)"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="main-navbar navbar navbar-expand-lg">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="index.html">
+        <div class="logo-icon"><i class="fas fa-compass" style="color:#fff"></i></div>
+        <div class="logo-text-wrap">
+          <span class="logo-title">Ilocos Norte</span>
+          <span class="logo-sub">Philippines</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-expanded="false">
+        <div class="hamburger-lines"><span></span><span></span><span></span></div>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="destinations.html" data-bs-toggle="dropdown">Destinations</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="destinations.html">All Destinations</a></li>
+          <li><a class="dropdown-item" href="beaches.html">Beaches</a></li>
+          <li><a class="dropdown-item" href="heritage.html">Heritage Sites</a></li>
+          <li><a class="dropdown-item" href="adventure.html">Adventure</a></li>
+          <li><a class="dropdown-item" href="spot-detail.html">Spot Details</a></li>
+        </ul>
+      </li><li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="festivals.html" data-bs-toggle="dropdown">Culture</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="festivals.html">Festivals</a></li>
+          <li><a class="dropdown-item" href="food.html">Food &amp; Cuisine</a></li>
+          <li><a class="dropdown-item" href="gallery.html">Photo Gallery</a></li>
+          <li><a class="dropdown-item" href="video-gallery.html">Video Gallery</a></li>
+        </ul>
+      </li><li class="nav-item dropdown">
+        <a class="nav-link active dropdown-toggle" href="travel-guide.html" data-bs-toggle="dropdown">Travel</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="travel-guide.html">Travel Guide</a></li>
+          <li><a class="dropdown-item" href="hotels.html">Hotels &amp; Resorts</a></li>
+          <li><a class="dropdown-item" href="transportation.html">Transportation</a></li>
+          <li><a class="dropdown-item" href="tourist-map.html">Tourist Map</a></li>
+          <li><a class="dropdown-item" href="plan-trip.html">Plan Your Trip</a></li>
+        </ul>
+      </li><li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="events.html" data-bs-toggle="dropdown">News</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="events.html">Events</a></li>
+          <li><a class="dropdown-item" href="news.html">News &amp; Updates</a></li>
+        </ul>
+      </li><li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-auth-btns">
+          <label class="dark-toggle-wrap">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="dark-toggle-track"></span>
+          </label>
+          <a href="signin.html" class="btn-nav-signin">Sign In</a>
+          <a href="signup.html" class="btn-nav-signup">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('images/cape-bojeador.jpg');background-color:#0a2a4a;"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="container-fluid px-4 px-md-5">
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow"><i class="fas fa-book-open me-2"></i>Essential Guide</span>
+      <h1 class="page-hero-title">Travel <span class="accent">Guide</span></h1>
+      <p class="page-hero-subtitle">Everything you need to plan the perfect trip to Ilocos Norte — from when to go to what to pack.</p>
+    </div>
+  </div>
+</section>
+<div class="site-breadcrumb">
+  <div class="container-fluid px-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        
+        <li class="breadcrumb-item active">Travel Guide</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<section class="section-pad section-dark">
+  <div class="container-fluid px-4 px-md-5">
+    <div class="row g-5">
+      <div class="col-lg-8">
+        <!-- When to Go -->
+        <div class="mb-5 fade-in">
+          <div class="section-label"><i class="fas fa-sun"></i> Climate</div>
+          <h2 class="section-title">When to <span class="accent">Visit</span></h2>
+          <div class="row g-3 mt-3">
+            <div class="col-md-6">
+              <div class="glass-card p-4">
+                <div style="color:var(--gold);font-size:20px;margin-bottom:10px;">☀️ Dry Season (Nov–May)</div>
+                <p style="font-size:13px;color:rgba(255,255,255,0.7);">The ideal time to visit. Expect sunny skies, calm seas, and comfortable temperatures (24–32°C). Beach activities, festivals, and outdoor adventures are at their best.</p>
+                <div style="font-size:11px;letter-spacing:1px;color:var(--sky);text-transform:uppercase;margin-top:8px;">⭐ Recommended for Tourists</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="glass-card p-4">
+                <div style="color:var(--sky);font-size:20px;margin-bottom:10px;">🌧️ Wet Season (Jun–Oct)</div>
+                <p style="font-size:13px;color:rgba(255,255,255,0.7);">Typhoon season brings heavy rainfall and rough seas. Some roads may flood. However, landscapes are lush and green, and accommodation prices are lower.</p>
+                <div style="font-size:11px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;margin-top:8px;">⚠️ Typhoon Risk</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Itinerary Suggestions -->
+        <div class="mb-5 fade-in">
+          <div class="section-label"><i class="fas fa-route"></i> Itineraries</div>
+          <h2 class="section-title">Suggested <span class="accent">Itineraries</span></h2>
+
+          <!-- 3 Day -->
+          <div class="glass-card p-4 mb-3">
+            <h4 style="font-family:var(--font-display);color:var(--sky);margin-bottom:16px;">🗓️ 3-Day Highlights Tour</h4>
+            <div class="d-flex flex-column gap-2">
+              <div class="trip-step">
+                <div class="trip-step-num">1</div>
+                <div class="trip-step-body">
+                  <h4>Day 1 — Laoag City & Heritage</h4>
+                  <p>Arrive at Laoag Airport → Saint William Cathedral & Sinking Bell Tower → La Paz Sand Dunes (4x4 ride) → Empanada at the Riverside → Laoag City dinner</p>
+                </div>
+              </div>
+              <div class="trip-step">
+                <div class="trip-step-num">2</div>
+                <div class="trip-step-body">
+                  <h4>Day 2 — Paoay & Windmills</h4>
+                  <p>Paoay Church (UNESCO) → Paoay Lake → Lunch at Batac (Marcos Mausoleum) → Bangui Windmills at sunset → Overnight in Pagudpud</p>
+                </div>
+              </div>
+              <div class="trip-step">
+                <div class="trip-step-num">3</div>
+                <div class="trip-step-body">
+                  <h4>Day 3 — Pagudpud Paradise</h4>
+                  <p>Saud Beach morning swim → Kabigan Falls trek → Blue Lagoon → Kapurpurawan Rock Formation → Patapat Viaduct → Return to Laoag</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 Day -->
+          <div class="glass-card p-4">
+            <h4 style="font-family:var(--font-display);color:var(--sunset);margin-bottom:16px;">🗓️ 5-Day Complete Explorer</h4>
+            <p style="font-size:13px;color:rgba(255,255,255,0.65);">Includes all 3-day highlights PLUS: Day 4 — Adams Municipality trek to Timmangtang Rock and waterfalls. Day 5 — Laoag food tour (empanada, longganisa, bagnet), souvenir shopping at pasalubong centers, and departure.</p>
+          </div>
+        </div>
+
+        <!-- Budget Guide -->
+        <div class="fade-in">
+          <div class="section-label"><i class="fas fa-peso-sign"></i> Budget</div>
+          <h2 class="section-title">Budget <span class="accent">Guide</span></h2>
+          <div class="glass-card p-4 mt-3">
+            <div class="row g-3">
+              <div class="col-md-4 text-center">
+                <div style="font-size:28px;margin-bottom:8px;">🎒</div>
+                <div style="font-family:var(--font-display);font-size:20px;color:var(--sky);">Budget Traveler</div>
+                <div style="font-family:var(--font-display);font-size:28px;color:var(--white);">₱800–1,500</div>
+                <div style="font-size:11px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;">Per Day</div>
+                <p style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:8px;">Guesthouses, jeepneys, carinderia meals, self-guided tours</p>
+              </div>
+              <div class="col-md-4 text-center">
+                <div style="font-size:28px;margin-bottom:8px;">🧳</div>
+                <div style="font-family:var(--font-display);font-size:20px;color:var(--gold);">Mid-Range</div>
+                <div style="font-family:var(--font-display);font-size:28px;color:var(--white);">₱2,000–4,000</div>
+                <div style="font-size:11px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;">Per Day</div>
+                <p style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:8px;">3-star hotels, tourist van hire, restaurant meals, guided tours</p>
+              </div>
+              <div class="col-md-4 text-center">
+                <div style="font-size:28px;margin-bottom:8px;">✈️</div>
+                <div style="font-family:var(--font-display);font-size:20px;color:var(--sunset);">Luxury</div>
+                <div style="font-family:var(--font-display);font-size:28px;color:var(--white);">₱5,000+</div>
+                <div style="font-size:11px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;">Per Day</div>
+                <p style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:8px;">Resort hotels, private transfers, fine dining, premium experiences</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4 fade-right">
+        <div class="d-flex flex-column gap-4">
+          <div class="glass-card p-4">
+            <h4 style="font-family:var(--font-display);color:var(--white);margin-bottom:16px;">📋 Quick Facts</h4>
+            <div class="d-flex flex-column gap-3" style="font-size:13px;">
+              <div class="d-flex justify-content-between"><span style="color:rgba(255,255,255,0.55);">Currency</span><span style="color:var(--white);">Philippine Peso (₱)</span></div>
+              <div class="d-flex justify-content-between"><span style="color:rgba(255,255,255,0.55);">Language</span><span style="color:var(--white);">Ilocano, Filipino, English</span></div>
+              <div class="d-flex justify-content-between"><span style="color:rgba(255,255,255,0.55);">Time Zone</span><span style="color:var(--white);">PST (UTC+8)</span></div>
+              <div class="d-flex justify-content-between"><span style="color:rgba(255,255,255,0.55);">Nearest Airport</span><span style="color:var(--white);">Laoag (LAO)</span></div>
+              <div class="d-flex justify-content-between"><span style="color:rgba(255,255,255,0.55);">Flight from Manila</span><span style="color:var(--white);">~1 hour</span></div>
+              <div class="d-flex justify-content-between"><span style="color:rgba(255,255,255,0.55);">Voltage</span><span style="color:var(--white);">220V / 60Hz</span></div>
+            </div>
+          </div>
+          <div class="glass-card p-4">
+            <h4 style="font-family:var(--font-display);color:var(--white);margin-bottom:16px;">🎒 What to Pack</h4>
+            <ul style="font-size:13px;color:rgba(255,255,255,0.65);padding-left:16px;line-height:2;">
+              <li>Lightweight, breathable clothing</li>
+              <li>Strong sunscreen (SPF 50+)</li>
+              <li>Insect repellent for forest hikes</li>
+              <li>Comfortable walking shoes</li>
+              <li>Rain jacket (wet season)</li>
+              <li>Reusable water bottle</li>
+              <li>Cash (limited ATMs in rural areas)</li>
+              <li>Power bank</li>
+            </ul>
+          </div>
+          <div class="info-box">
+            <div class="info-box-title"><i class="fas fa-phone me-2"></i>Emergency Numbers</div>
+            <p>Police: 117 or 166<br>Fire: 160<br>NDRRMC: (02) 911-1406<br>Tourist Police: +63 77 771 3000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-brand mb-4">
+            <div class="footer-logo-title mb-2">Ilocos <span>Norte</span></div>
+            <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:12px;">Crown of the North</div>
+            <p>Heritage, nature, culture, and the warmth of the Ilocano people await you in the Philippine Northwest.</p>
+          </div>
+          <div class="footer-social">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Explore</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="beaches.html">Beaches</a></li>
+            <li><a href="heritage.html">Heritage Sites</a></li>
+            <li><a href="adventure.html">Adventure</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Culture</div>
+          <ul class="footer-links">
+            <li><a href="festivals.html">Festivals</a></li>
+            <li><a href="food.html">Food &amp; Cuisine</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="video-gallery.html">Videos</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Travel</div>
+          <ul class="footer-links">
+            <li><a href="travel-guide.html">Travel Guide</a></li>
+            <li><a href="hotels.html">Hotels &amp; Resorts</a></li>
+            <li><a href="transportation.html">Transportation</a></li>
+            <li><a href="tourist-map.html">Tourist Map</a></li>
+            <li><a href="plan-trip.html">Plan Your Trip</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+          </ul>
+          <div class="mt-4" style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.9;">
+            <i class="fas fa-phone me-2" style="color:var(--sky);"></i>+63 77 771 3000<br>
+            <i class="fas fa-envelope me-2" style="color:var(--sky);"></i>tourism@ilocosnorte.gov.ph
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container-fluid px-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>&copy; 2026 Ilocos Norte Tourism &middot; <a href="#">Privacy Policy</a> &middot; <a href="#">Terms</a></span>
+        <span>Built with <i class="fas fa-heart" style="color:var(--sunset);"></i> &middot; BSIS II-A &middot; CTU Main</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="lightbox-overlay">
+  <button id="lightbox-close"><i class="fas fa-times"></i></button>
+  <button id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+  <img id="lightbox-img" src="" alt="">
+  <button id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+</div>
+<button id="back-to-top" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+<div id="cookie-banner">
+  <p><i class="fas fa-cookie-bite"></i> We use cookies to enhance your experience exploring Ilocos Norte.</p>
+  <div class="cookie-btns"><button id="cookie-accept">Accept All</button><button id="cookie-decline">Decline</button></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to get to and around Ilocos Norte — flights, buses, jeepney, tricycle and more.">
+  <title>Transportation — Ilocos Norte</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="loading-screen">
+  <div class="loader-logo">Ilocos <span>Norte</span></div>
+  <div class="loader-sub">Crown of the North</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+<div class="page-transition"></div>
+<canvas id="particles-canvas"></canvas>
+<div id="progress-bar"></div>
+
+<header class="site-header">
+  <div class="header-top-bar">
+    <div class="container-fluid px-4">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="header-contact-info">
+          <span><i class="fas fa-phone"></i>+63 77 771 3000</span>
+          <span class="d-none d-md-inline"><i class="fas fa-envelope"></i>tourism@ilocosnorte.gov.ph</span>
+          <span class="d-none d-lg-inline"><i class="fas fa-clock"></i>Mon–Fri 8AM–5PM</span>
+        </div>
+        <div class="d-flex gap-3" style="font-size:12px;">
+          <a href="#" style="color:rgba(255,255,255,0.5)"><i class="fab fa-facebook"></i></a>
+          <a href="#" style="color:rgba(255,255,255,0.5)"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="color:rgba(255,255,255,0.5)"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="main-navbar navbar navbar-expand-lg">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="index.html">
+        <div class="logo-icon"><i class="fas fa-compass" style="color:#fff"></i></div>
+        <div class="logo-text-wrap">
+          <span class="logo-title">Ilocos Norte</span>
+          <span class="logo-sub">Philippines</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-expanded="false">
+        <div class="hamburger-lines"><span></span><span></span><span></span></div>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="destinations.html" data-bs-toggle="dropdown">Destinations</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="destinations.html">All Destinations</a></li>
+              <li><a class="dropdown-item" href="beaches.html">Beaches</a></li>
+              <li><a class="dropdown-item" href="heritage.html">Heritage Sites</a></li>
+              <li><a class="dropdown-item" href="adventure.html">Adventure</a></li>
+              <li><a class="dropdown-item" href="spot-detail.html">Spot Details</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="festivals.html" data-bs-toggle="dropdown">Culture</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="festivals.html">Festivals</a></li>
+              <li><a class="dropdown-item" href="food.html">Food &amp; Cuisine</a></li>
+              <li><a class="dropdown-item" href="gallery.html">Photo Gallery</a></li>
+              <li><a class="dropdown-item" href="video-gallery.html">Video Gallery</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  active dropdown-toggle" href="travel-guide.html" data-bs-toggle="dropdown">Travel</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="travel-guide.html">Travel Guide</a></li>
+              <li><a class="dropdown-item" href="hotels.html">Hotels &amp; Resorts</a></li>
+              <li><a class="dropdown-item" href="transportation.html">Transportation</a></li>
+              <li><a class="dropdown-item" href="tourist-map.html">Tourist Map</a></li>
+              <li><a class="dropdown-item" href="plan-trip.html">Plan Your Trip</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="events.html" data-bs-toggle="dropdown">News</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="events.html">Events</a></li>
+              <li><a class="dropdown-item" href="news.html">News &amp; Updates</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-auth-btns">
+          <label class="dark-toggle-wrap">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="dark-toggle-track"></span>
+          </label>
+          <a href="signin.html" class="btn-nav-signin">Sign In</a>
+          <a href="signup.html" class="btn-nav-signup">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('images/bangui-windmills.jpg');background-color:#0a2a4a;"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="container-fluid px-4 px-md-5">
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow"><i class="fas fa-route me-2"></i>Getting Around</span>
+      <h1 class="page-hero-title">Transportation <span class="accent">Guide</span></h1>
+      <p class="page-hero-subtitle">Everything you need to know about getting to Ilocos Norte and moving around the province.</p>
+    </div>
+  </div>
+</section>
+<div class="site-breadcrumb">
+  <div class="container-fluid px-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">Transportation</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<section class="section-pad section-dark">
+  <div class="container-fluid px-4 px-md-5">
+
+    <!-- Getting Here -->
+    <div class="text-center mb-5">
+      <div class="section-label justify-content-center fade-in"><i class="fas fa-plane-arrival"></i> Getting Here</div>
+      <h2 class="section-title fade-in delay-1">How to <span class="accent">Arrive</span></h2>
+      <p class="section-subtitle mx-auto fade-in delay-2">Three main ways to reach Ilocos Norte — by air, bus, or private car.</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-4 fade-in delay-1">
+        <div class="transport-card h-100">
+          <span class="transport-icon"><i class="fas fa-plane"></i></span>
+          <div class="transport-name">By Air ✈️</div>
+          <p class="transport-desc">
+            <strong style="color:var(--sky);">Laoag International Airport (LAO)</strong> serves daily flights from Manila via Philippine Airlines, Cebu Pacific, and AirAsia. Flight time is approximately <strong style="color:var(--white);">1 hour</strong>. The airport is located just 5 km from downtown Laoag. Taxis, tricycles, and hotel shuttles are available at the terminal.
+          </p>
+          <div class="info-box mt-3" style="margin:0;">
+            <div class="info-box-title"><i class="fas fa-ticket-alt me-2"></i>Typical Airfare</div>
+            <p>₱1,500–₱4,500 one-way (Manila–Laoag, varies by airline and booking date)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in delay-2">
+        <div class="transport-card h-100">
+          <span class="transport-icon"><i class="fas fa-bus-alt"></i></span>
+          <div class="transport-name">By Bus 🚌</div>
+          <p class="transport-desc">
+            Comfortable air-conditioned buses depart daily from <strong style="color:var(--sky);">Manila's Cubao and Pasay terminals</strong>. Major operators: <strong style="color:var(--white);">Partas, Farinas, GV Florida, Dominion</strong>. Travel time is <strong style="color:var(--white);">9–11 hours</strong>. Overnight buses are the most popular budget option — depart at night, arrive in Laoag by morning.
+          </p>
+          <div class="info-box mt-3" style="margin:0;">
+            <div class="info-box-title"><i class="fas fa-peso-sign me-2"></i>Typical Fare</div>
+            <p>₱700–₱1,200 one-way (regular to deluxe class)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in delay-3">
+        <div class="transport-card h-100">
+          <span class="transport-icon"><i class="fas fa-car"></i></span>
+          <div class="transport-name">By Car 🚗</div>
+          <p class="transport-desc">
+            Drive from Manila via <strong style="color:var(--sky);">NLEX → SCTEX → TPLEX → NLEx Rosario</strong> then north along the Ilocos coastal highway through Ilocos Sur. Total distance approximately <strong style="color:var(--white);">480 km</strong>. Travel time is <strong style="color:var(--white);">7–8 hours</strong> depending on traffic. Highly scenic coastal drive especially through Ilocos Sur.
+          </p>
+          <div class="info-box mt-3" style="margin:0;">
+            <div class="info-box-title"><i class="fas fa-gas-pump me-2"></i>Estimated Fuel</div>
+            <p>₱1,500–₱2,500 round trip depending on vehicle type</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider mb-5"></div>
+
+    <!-- Getting Around -->
+    <div class="text-center mb-5">
+      <div class="section-label justify-content-center fade-in"><i class="fas fa-map-signs"></i> Getting Around</div>
+      <h2 class="section-title fade-in delay-1">Local <span class="accent">Transport</span></h2>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-6 col-lg-3 fade-in delay-1">
+        <div class="glass-card p-4 text-center h-100">
+          <div style="font-size:48px;margin-bottom:12px;">🛺</div>
+          <h4 style="font-family:var(--font-display);color:var(--white);margin-bottom:10px;">Tricycle</h4>
+          <p style="font-size:13px;color:rgba(255,255,255,0.65);line-height:1.7;">Primary short-distance transport within towns. Negotiate fare before boarding. Great for getting around Laoag, Bangui, and Pagudpud town centers.</p>
+          <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);">
+            <span style="font-family:var(--font-display);font-size:20px;color:var(--gold);">₱10–200</span>
+            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);">per ride</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in delay-2">
+        <div class="glass-card p-4 text-center h-100">
+          <div style="font-size:48px;margin-bottom:12px;">🚌</div>
+          <h4 style="font-family:var(--font-display);color:var(--white);margin-bottom:10px;">Jeepney</h4>
+          <p style="font-size:13px;color:rgba(255,255,255,0.65);line-height:1.7;">Connects towns and municipalities across the province. Routes run from Laoag to Batac, Paoay, Bangui, and Pagudpud. Flag down at the roadside.</p>
+          <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);">
+            <span style="font-family:var(--font-display);font-size:20px;color:var(--gold);">₱15–80</span>
+            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);">per trip</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in delay-3">
+        <div class="glass-card p-4 text-center h-100">
+          <div style="font-size:48px;margin-bottom:12px;">🚐</div>
+          <h4 style="font-family:var(--font-display);color:var(--white);margin-bottom:10px;">Tourist Van</h4>
+          <p style="font-size:13px;color:rgba(255,255,255,0.65);line-height:1.7;">Most convenient for tourists. Hire a private van with driver for customized itineraries. Hotels and tour agencies in Laoag can arrange bookings.</p>
+          <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);">
+            <span style="font-family:var(--font-display);font-size:20px;color:var(--gold);">₱2,000–4,000</span>
+            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);">per day</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-in delay-4">
+        <div class="glass-card p-4 text-center h-100">
+          <div style="font-size:48px;margin-bottom:12px;">🛵</div>
+          <h4 style="font-family:var(--font-display);color:var(--white);margin-bottom:10px;">Motorcycle Rental</h4>
+          <p style="font-size:13px;color:rgba(255,255,255,0.65);line-height:1.7;">Ideal for independent exploration. Rent motorcycles or scooters in Laoag City. Requires a valid Philippine or international license.</p>
+          <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);">
+            <span style="font-family:var(--font-display);font-size:20px;color:var(--gold);">₱400–800</span>
+            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);">per day</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Route Table -->
+    <h3 class="section-title fade-in" style="font-size:28px;">Key Routes &amp; <span class="accent">Travel Times</span></h3>
+    <div class="glass-card p-0 mt-3 fade-in delay-1" style="overflow:hidden;">
+      <table class="table table-dark mb-0" style="background:transparent;">
+        <thead style="background:rgba(58,173,218,0.12);border-bottom:1px solid rgba(255,255,255,0.1);">
+          <tr>
+            <th style="color:var(--sky);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:16px 20px;font-weight:700;">Route</th>
+            <th style="color:var(--sky);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:16px;font-weight:700;">Transport</th>
+            <th style="color:var(--sky);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:16px;font-weight:700;">Duration</th>
+            <th style="color:var(--sky);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:16px;font-weight:700;">Fare</th>
+          </tr>
+        </thead>
+        <tbody style="font-size:14px;">
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:14px 20px;color:var(--white);">Laoag → Paoay Church</td>
+            <td style="padding:14px;color:rgba(255,255,255,0.7);">Jeepney / Tricycle</td>
+            <td style="padding:14px;color:rgba(255,255,255,0.7);">30–45 min</td>
+            <td style="padding:14px;color:var(--gold);font-weight:600;">₱20–50</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:14px 20px;color:var(--white);">Laoag → La Paz Sand Dunes</td>
+            <td style="padding:14px;color:rgba(255,255,255,0.7);">Tricycle</td>
+            <td style="padding:14px;color:rgba(255,255,255,0.7);">15–20 min</td>
+            <td style="padding:14px;color:var(--gold);font-weight:600;">₱50–100</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:14px 20px;color:var(--white);">Laoag → Bangui Windmills</td>
+            <td style="padding:14px;color:rgba(255,255,255,0.7);">Bus / Jeepney / Van</td>
+            <td style="padding:14px;color:rgba(255,255,255,0.7);">1.5–2 hours</td>
+            <td style="padding:14px;color:var(--gold);font-weight:600;">₱60–120</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:14px 20px;color:var(--white);">Laoag → Kapurpurawan / Cape Bojeador</td>
+            <td style="padding:14px;color:rgba(255,255,255,0.7);">Van / Jeepney</td>
+            <td style="padding:14px;color:rgba(255,255,255,0.7);">2 hours</td>
+            <td style="padding:14px;color:var(--gold);font-weight:600;">₱80–150</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:14px 20px;color:var(--white);">Laoag → Saud Beach (Pagudpud)</td>
+            <td style="padding:14px;color:rgba(255,255,255,0.7);">Bus / Van</td>
+            <td style="padding:14px;color:rgba(255,255,255,0.7);">2.5–3 hours</td>
+            <td style="padding:14px;color:var(--gold);font-weight:600;">₱100–200</td>
+          </tr>
+          <tr>
+            <td style="padding:14px 20px;color:var(--white);">Laoag → Blue Lagoon (Pagudpud)</td>
+            <td style="padding:14px;color:rgba(255,255,255,0.7);">Bus / Van / Tricycle</td>
+            <td style="padding:14px;color:rgba(255,255,255,0.7);">3–3.5 hours</td>
+            <td style="padding:14px;color:var(--gold);font-weight:600;">₱120–250</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row g-4 mt-5">
+      <div class="col-md-4 fade-in delay-1">
+        <div class="info-box">
+          <div class="info-box-title"><i class="fas fa-info-circle me-2"></i>Pro Tip</div>
+          <p>For maximum flexibility and comfort, hiring a tourist van with a local driver-guide for ₱2,500–₱3,500/day is highly recommended. A good local driver will know shortcuts, best photo spots, and where to eat.</p>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in delay-2">
+        <div class="info-box warning">
+          <div class="info-box-title"><i class="fas fa-exclamation-triangle me-2"></i>Road Conditions</div>
+          <p>Main highways are well-paved and clearly signed. Some barangay roads to waterfalls and mountain areas may be rough — 4x4 vehicles are recommended for Adams municipality.</p>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in delay-3">
+        <div class="info-box success">
+          <div class="info-box-title"><i class="fas fa-phone me-2"></i>Taxi / Ride-Hailing</div>
+          <p>Grab operates in Laoag City with limited availability. Traditional taxi meters are rare — agree on a fixed price before boarding any unmarked taxi or tricycle for longer trips.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-brand mb-4">
+            <div class="footer-logo-title mb-2">Ilocos <span>Norte</span></div>
+            <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:12px;">Crown of the North</div>
+            <p>Heritage, nature, culture, and the warmth of the Ilocano people await you in the Philippine Northwest.</p>
+          </div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Explore</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="beaches.html">Beaches</a></li>
+            <li><a href="heritage.html">Heritage Sites</a></li>
+            <li><a href="adventure.html">Adventure</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Culture</div>
+          <ul class="footer-links">
+            <li><a href="festivals.html">Festivals</a></li>
+            <li><a href="food.html">Food &amp; Cuisine</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="video-gallery.html">Videos</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Travel</div>
+          <ul class="footer-links">
+            <li><a href="travel-guide.html">Travel Guide</a></li>
+            <li><a href="hotels.html">Hotels &amp; Resorts</a></li>
+            <li><a href="transportation.html">Transportation</a></li>
+            <li><a href="tourist-map.html">Tourist Map</a></li>
+            <li><a href="plan-trip.html">Plan Your Trip</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+          </ul>
+          <div class="mt-4" style="font-size:12px;color:rgba(255,255,255,0.5);line-height:2;">
+            <i class="fas fa-phone me-2" style="color:var(--sky);"></i>+63 77 771 3000<br>
+            <i class="fas fa-envelope me-2" style="color:var(--sky);"></i>tourism@ilocosnorte.gov.ph
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container-fluid px-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>&copy; 2026 Ilocos Norte Tourism &middot; <a href="#">Privacy Policy</a> &middot; <a href="#">Terms</a></span>
+        <span>Built with <i class="fas fa-heart" style="color:var(--sunset);"></i> &middot; BSIS II-A &middot; CTU Main</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="lightbox-overlay">
+  <button id="lightbox-close"><i class="fas fa-times"></i></button>
+  <button id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+  <img id="lightbox-img" src="" alt="">
+  <button id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+</div>
+<button id="back-to-top" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+<div id="cookie-banner">
+  <p><i class="fas fa-cookie-bite"></i> We use cookies to enhance your experience exploring Ilocos Norte.</p>
+  <div class="cookie-btns"><button id="cookie-accept">Accept All</button><button id="cookie-decline">Decline</button></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
