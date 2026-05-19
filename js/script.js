@@ -505,22 +505,308 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var cards     = document.querySelectorAll('.filterable-card');
     var noResults = document.getElementById('no-results');
+    var tabs      = document.querySelectorAll('[data-tab-group] .custom-tab');
+    var params    = new URLSearchParams(window.location.search);
+    var activeCategory = params.get('category') || 'all';
 
-    searchInput.addEventListener('input', function () {
-      var query = this.value.toLowerCase().trim();
+    function applyFilters() {
+      var query = searchInput.value.toLowerCase().trim();
       var shown = 0;
 
       cards.forEach(function (card) {
         var text = (card.textContent || '').toLowerCase();
-        var match = !query || text.includes(query);
+        var category = card.getAttribute('data-category') || '';
+        var matchesSearch = !query || text.includes(query);
+        var matchesCategory = activeCategory === 'all' || category === activeCategory;
+        var match = matchesSearch && matchesCategory;
         card.style.display = match ? '' : 'none';
         if (match) shown++;
       });
 
       if (noResults) noResults.style.display = shown === 0 ? 'block' : 'none';
+    }
+
+    tabs.forEach(function (tab) {
+      if (tab.getAttribute('data-tab') === activeCategory) {
+        tabs.forEach(function (t) { t.classList.remove('active'); });
+        tab.classList.add('active');
+      }
+
+      tab.addEventListener('click', function () {
+        activeCategory = this.getAttribute('data-tab') || 'all';
+        applyFilters();
+      });
     });
+
+    searchInput.addEventListener('input', applyFilters);
+    applyFilters();
   })();
 
+
+  /* ============================================================
+     DESTINATION DETAILS POPUP
+  ============================================================ */
+  (function () {
+    var triggers = document.querySelectorAll('[data-spot]');
+    if (!triggers.length) return;
+
+    var spots = {
+      'paoay-church': {
+        title: 'Paoay Church',
+        tag: 'UNESCO Heritage - Paoay',
+        image: 'images/paoay_church.jpg',
+        icon: 'fas fa-landmark',
+        summary: 'A UNESCO World Heritage Site and masterpiece of Earthquake Baroque architecture, built in 1704.',
+        overview: [
+          'The Church of Saint Augustine in Paoay is one of four Baroque churches inscribed as a UNESCO World Heritage Site under the collective designation "Baroque Churches of the Philippines" in 1993.',
+          'Its massive coral stone buttresses, thick walls, and distinctive silhouette were built to withstand earthquakes, making it one of the most recognizable heritage landmarks in the country.'
+        ],
+        facts: [
+          ['Location', 'Paoay, Ilocos Norte'],
+          ['Built', '1704'],
+          ['Known For', 'Earthquake Baroque architecture'],
+          ['Best Time', 'Morning or late afternoon']
+        ],
+        tips: ['Visit the church grounds slowly to appreciate the buttresses.', 'Bring a wide-angle camera lens for the full facade.', 'Pair the visit with nearby Paoay Lake and Malacanang of the North.']
+      },
+      'bangui-windmills': {
+        title: 'Bangui Windmills',
+        tag: 'Iconic Landmark - Bangui',
+        image: 'images/bangui_windmills.jpg',
+        icon: 'fas fa-wind',
+        summary: 'Southeast Asia\'s first wind farm: 20 towering turbines rising from the black-sand shores of Bangui Bay.',
+        overview: [
+          'The Bangui Wind Farm is a 25-megawatt wind energy facility along Bangui Bay and the first commercial wind farm in Southeast Asia, commencing operations in 2005.',
+          'It consists of 20 Vestas V82 turbines, each about 70 meters tall, arranged in a single row stretching 1.2 kilometers along the coast. Visitors can walk along the shoreline and photograph the turbines at sunrise or sunset.'
+        ],
+        facts: [
+          ['Location', 'Bangui, Ilocos Norte'],
+          ['Entrance Fee', 'Free'],
+          ['Opening Hours', 'Open 24/7'],
+          ['Travel Time', 'About 1.5-2 hours from Laoag']
+        ],
+        tips: ['Golden hour gives the strongest photographs.', 'Do not climb or touch the turbines.', 'Expect strong wind along the black-sand shoreline.']
+      },
+      'kapurpurawan-rock-formation': {
+        title: 'Kapurpurawan Rock Formation',
+        tag: 'Rock Formation - Burgos',
+        image: 'images/kapurpurawan.jpg',
+        icon: 'fas fa-mountain',
+        summary: 'Dazzling white rock formations carved by wind and sea over millennia on the northern coast.',
+        overview: [
+          'Kapurpurawan is known for smooth, bright limestone formations shaped by constant wind and sea spray. Its name comes from the Ilocano word associated with whiteness.',
+          'The area feels stark and sculptural, with open coastal views and nearby northern landmarks such as Bangui Windmills and Cape Bojeador.'
+        ],
+        facts: [
+          ['Location', 'Burgos, Ilocos Norte'],
+          ['Known For', 'White limestone formations'],
+          ['Best Time', 'Low tide and dry weather'],
+          ['Nearby', 'Bangui Windmills and Cape Bojeador']
+        ],
+        tips: ['Wear comfortable shoes for the walk.', 'Visit during low tide for safer access.', 'Bring water and sun protection because shade is limited.']
+      },
+      'saud-beach': {
+        title: 'Saud Beach',
+        tag: 'Top Beach - Pagudpud',
+        image: 'images/saud_beach.jpg',
+        icon: 'fas fa-umbrella-beach',
+        summary: 'Powdery white sand, crystal-blue waters, and gentle waves in Ilocos Norte\'s most celebrated coastal escape.',
+        overview: [
+          'Saud Beach is the crown jewel of Ilocos Norte\'s coastline. Its calm water, broad white sand, and relaxed atmosphere make it a favorite for swimming, snorkeling, and sunset-watching.',
+          'Often called the "Boracay of the North," it offers a quieter coastal experience while still being close to resorts and Pagudpud attractions.'
+        ],
+        facts: [
+          ['Location', 'Pagudpud, Ilocos Norte'],
+          ['Best For', 'Swimming and sunset views'],
+          ['Beach Type', 'White sand'],
+          ['Nearby', 'Blue Lagoon and Patapat Viaduct']
+        ],
+        tips: ['Go early for calmer water and fewer crowds.', 'Stay for sunset if the weather is clear.', 'Check sea conditions during monsoon months.']
+      },
+      'cape-bojeador-lighthouse': {
+        title: 'Cape Bojeador Lighthouse',
+        tag: 'Lighthouse - Burgos',
+        image: 'images/cape_bojeador.jpg',
+        icon: 'fas fa-broadcast-tower',
+        summary: 'An octagonal brick lighthouse built in 1892, perched on a hill above the South China Sea.',
+        overview: [
+          'Cape Bojeador Lighthouse, also known as Burgos Lighthouse, is a Spanish colonial-era landmark overlooking the northern coast of Ilocos Norte.',
+          'Its elevated position gives sweeping views of the sea and surrounding hills, making it a strong stop for heritage travelers and photographers.'
+        ],
+        facts: [
+          ['Location', 'Burgos, Ilocos Norte'],
+          ['Built', '1892'],
+          ['Known For', 'Historic hilltop lighthouse'],
+          ['Best Time', 'Clear morning or late afternoon']
+        ],
+        tips: ['Expect a short uphill walk.', 'Use the viewpoint for coastal photos.', 'Combine it with Kapurpurawan and Bangui in one northern route.']
+      },
+      'la-paz-sand-dunes': {
+        title: 'La Paz Sand Dunes',
+        tag: 'Adventure - Laoag',
+        image: 'images/sandunes.jpg',
+        icon: 'fas fa-truck-monster',
+        summary: 'A vast desert-like expanse near Laoag City, popular for 4x4 rides and sandboarding.',
+        overview: [
+          'The La Paz Sand Dunes form one of Ilocos Norte\'s most exciting adventure landscapes, with rolling sand ridges meeting views of the sea.',
+          'Visitors come for off-road 4x4 rides, sandboarding, dramatic sunset scenery, and the unusual feeling of a desert-like terrain in the Philippines.'
+        ],
+        facts: [
+          ['Location', 'Laoag City'],
+          ['Best For', '4x4 rides and sandboarding'],
+          ['Landscape', 'Coastal sand dunes'],
+          ['Best Time', 'Late afternoon']
+        ],
+        tips: ['Book rides with local operators.', 'Secure loose items before the 4x4 route.', 'Wear sunglasses or eye protection when windy.']
+      },
+      'blue-lagoon': {
+        title: 'Blue Lagoon',
+        tag: 'Hidden Gem - Pagudpud',
+        image: 'images/bluelagoon.jpg',
+        icon: 'fas fa-water',
+        summary: 'A scenic cove of clear turquoise water tucked between rocky cliffs and lush coastal terrain.',
+        overview: [
+          'Blue Lagoon is a dramatic Pagudpud cove known for bright turquoise water and a more rugged coastal setting than Saud Beach.',
+          'It is a favorite swimming spot when the sea is calm and a scenic stop for travelers exploring the northern tip of Ilocos Norte.'
+        ],
+        facts: [
+          ['Location', 'Pagudpud, Ilocos Norte'],
+          ['Best For', 'Swimming and coastal views'],
+          ['Known For', 'Turquoise water'],
+          ['Nearby', 'Saud Beach and Patapat Viaduct']
+        ],
+        tips: ['Check waves before swimming.', 'Visit on clear days for the strongest water color.', 'Bring reef-safe sun protection.']
+      },
+      'laoag-city': {
+        title: 'Laoag City',
+        tag: 'Capital - Laoag',
+        image: 'images/laoag.jpg',
+        icon: 'fas fa-city',
+        summary: 'The capital of Ilocos Norte, where colonial landmarks, food stops, malls, and nearby sand dunes converge.',
+        overview: [
+          'Laoag City is the main gateway to Ilocos Norte, blending heritage sites, local markets, modern conveniences, and access to the province\'s adventure routes.',
+          'The city is closely associated with the Sinking Bell Tower, Laoag Cathedral, Ilocano food, and trips toward the sand dunes and northern coast.'
+        ],
+        facts: [
+          ['Role', 'Provincial capital'],
+          ['Known For', 'Sinking Bell Tower and Laoag Cathedral'],
+          ['Best For', 'Food, heritage, and trip base'],
+          ['Nearby', 'La Paz Sand Dunes']
+        ],
+        tips: ['Use Laoag as a practical base for day trips.', 'Try local empanada and longganisa.', 'Visit heritage landmarks before heading north.']
+      },
+      'timmangtang-rock': {
+        title: 'Timmangtang Rock',
+        tag: 'Rock Formation - Adams',
+        image: 'images/timangtang.jpg',
+        icon: 'fas fa-mountain',
+        summary: 'A dramatic mountain rock formation reached through forests, rivers, and adventurous terrain in Adams.',
+        overview: [
+          'Timmangtang Rock is a rewarding nature stop for travelers looking beyond the usual coastal route. It sits within the green upland setting of Adams.',
+          'The journey is part of the attraction, with forest paths, mountain air, and river scenery creating a quieter adventure experience.'
+        ],
+        facts: [
+          ['Location', 'Adams, Ilocos Norte'],
+          ['Best For', 'Hiking and nature trips'],
+          ['Landscape', 'Mountain rock formation'],
+          ['Access', 'Local guidance recommended']
+        ],
+        tips: ['Wear proper trekking footwear.', 'Ask local guides about trail and weather conditions.', 'Bring water and pack out your trash.']
+      }
+    };
+
+    var overlay = document.createElement('div');
+    overlay.className = 'spot-modal-overlay';
+    overlay.setAttribute('aria-hidden', 'true');
+    overlay.innerHTML =
+      '<div class="spot-modal" role="dialog" aria-modal="true" aria-labelledby="spot-modal-title">' +
+        '<button class="spot-modal-close" type="button" aria-label="Close details"><i class="fas fa-times"></i></button>' +
+        '<div class="spot-modal-media"><img alt="" id="spot-modal-img"><span class="spot-modal-tag" id="spot-modal-tag"></span></div>' +
+        '<div class="spot-modal-content">' +
+          '<div class="section-label" id="spot-modal-label"><i class="fas fa-map-marker-alt"></i> Destination Details</div>' +
+          '<h2 class="spot-modal-title" id="spot-modal-title"></h2>' +
+          '<p class="spot-modal-summary" id="spot-modal-summary"></p>' +
+          '<div class="spot-modal-overview" id="spot-modal-overview"></div>' +
+          '<div class="spot-modal-facts" id="spot-modal-facts"></div>' +
+          '<div class="spot-modal-tips"><h3><i class="fas fa-lightbulb"></i> Travel Tips</h3><ul id="spot-modal-tips"></ul></div>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(overlay);
+
+    var closeBtn = overlay.querySelector('.spot-modal-close');
+    var modalImg = overlay.querySelector('#spot-modal-img');
+    var modalTag = overlay.querySelector('#spot-modal-tag');
+    var modalLabel = overlay.querySelector('#spot-modal-label');
+    var modalTitle = overlay.querySelector('#spot-modal-title');
+    var modalSummary = overlay.querySelector('#spot-modal-summary');
+    var modalOverview = overlay.querySelector('#spot-modal-overview');
+    var modalFacts = overlay.querySelector('#spot-modal-facts');
+    var modalTips = overlay.querySelector('#spot-modal-tips');
+    var previousFocus = null;
+
+    function renderList(items, callback) {
+      return items.map(callback).join('');
+    }
+
+    function openSpot(id) {
+      var spot = spots[id];
+      if (!spot) return;
+
+      previousFocus = document.activeElement;
+      modalImg.src = spot.image;
+      modalImg.alt = spot.title;
+      modalTag.innerHTML = '<i class="' + spot.icon + '"></i> ' + spot.tag;
+      modalLabel.innerHTML = '<i class="' + spot.icon + '"></i> Destination Details';
+      modalTitle.textContent = spot.title;
+      modalSummary.textContent = spot.summary;
+      modalOverview.innerHTML = renderList(spot.overview, function (text) {
+        return '<p>' + text + '</p>';
+      });
+      modalFacts.innerHTML = renderList(spot.facts, function (fact) {
+        return '<div class="spot-modal-fact"><span>' + fact[0] + '</span><strong>' + fact[1] + '</strong></div>';
+      });
+      modalTips.innerHTML = renderList(spot.tips, function (tip) {
+        return '<li>' + tip + '</li>';
+      });
+
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      closeBtn.focus();
+    }
+
+    function closeSpot() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      modalImg.removeAttribute('src');
+      if (previousFocus && previousFocus.focus) previousFocus.focus();
+    }
+
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        openSpot(this.getAttribute('data-spot'));
+      });
+
+      var card = trigger.closest('.dest-card');
+      if (card) {
+        card.addEventListener('click', function (e) {
+          if (e.target.closest('a, button')) return;
+          openSpot(trigger.getAttribute('data-spot'));
+        });
+      }
+    });
+
+    closeBtn.addEventListener('click', closeSpot);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeSpot();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!overlay.classList.contains('active')) return;
+      if (e.key === 'Escape') closeSpot();
+    });
+  })();
 
   /* ============================================================
      15. DARK MODE TOGGLE
@@ -869,8 +1155,13 @@ document.addEventListener('DOMContentLoaded', function () {
   (function () {
     var page = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.main-navbar .nav-link, .main-navbar .dropdown-item').forEach(function (link) {
-      var href = (link.getAttribute('href') || '').split('/').pop();
-      if (href === page) {
+      var rawHref = (link.getAttribute('href') || '').split('/').pop();
+      var href = rawHref.split('?')[0];
+      var hrefQuery = rawHref.indexOf('?') >= 0 ? '?' + rawHref.split('?')[1] : '';
+      var isDropdownItem = link.classList.contains('dropdown-item');
+      var queryMatches = hrefQuery ? hrefQuery === window.location.search : !isDropdownItem || !window.location.search;
+
+      if (href === page && queryMatches) {
         link.classList.add('active');
         var dropdownItem = link.closest('.dropdown-menu');
         if (dropdownItem) {
