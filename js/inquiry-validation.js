@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+﻿document.addEventListener('DOMContentLoaded', function () {
   var form = document.getElementById('inquiry-form');
   if (!form) return;
 
@@ -125,3 +125,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1000);
   });
 });
+

@@ -1,15 +1,8 @@
-﻿/* ================================================================
-   ILOCOS NORTE TOURISM  Premium Cinematic Design System
-   Stack: HTML5 + CSS3 + Bootstrap 5 + Vanilla JS
-   Color Palette: Deep Ocean Blue  Sunset Orange  Sand Beige
-   Aesthetic: Glassmorphism  Luxury  Cinematic  Modern Filipino
-================================================================ */
+﻿
 
-/* ---------------------------------------------------------------
-   CSS CUSTOM PROPERTIES
---------------------------------------------------------------- */
+
 :root {
-  /* Brand Colors */
+  
   --ocean:       #0a1f3c;
   --ocean-mid:   #0d3a6e;
   --ocean-light: #1a6aad;
@@ -23,25 +16,25 @@
   --white:       #ffffff;
   --off-white:   #f9f7f3;
 
-  /* Glass Effects */
+  
   --glass:         rgba(255,255,255,0.08);
   --glass-border:  rgba(255,255,255,0.18);
   --glass-shadow:  0 8px 32px rgba(0,0,0,0.35);
   --glass-dark:    rgba(10,31,60,0.55);
   --glass-sunset:  rgba(240,124,44,0.12);
 
-  /* Typography */
+  
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', -apple-system, sans-serif;
   --font-accent:  'Cormorant Garamond', Georgia, serif;
 
-  /* Spacing */
+  
   --section-pad: 96px 0;
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
 
-  /* Transitions */
+  
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --t-fast: 0.2s;
@@ -49,14 +42,10 @@
   --t-slow: 0.75s;
 }
 
-/* ---------------------------------------------------------------
-   GOOGLE FONTS IMPORT
---------------------------------------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* ---------------------------------------------------------------
-   RESET & BASE
---------------------------------------------------------------- */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
@@ -76,9 +65,7 @@ a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 p { line-height: 1.8; }
 
-/* ---------------------------------------------------------------
-   LOADING SCREEN
---------------------------------------------------------------- */
+
 #loading-screen {
   position: fixed;
   inset: 0;
@@ -143,9 +130,7 @@ p { line-height: 1.8; }
   to { width: 100%; }
 }
 
-/* ---------------------------------------------------------------
-   SCROLL PROGRESS BAR
---------------------------------------------------------------- */
+
 #progress-bar {
   position: fixed;
   top: 0;
@@ -157,9 +142,7 @@ p { line-height: 1.8; }
   transition: width 0.1s linear;
 }
 
-/* ---------------------------------------------------------------
-   PARTICLES CANVAS
---------------------------------------------------------------- */
+
 #particles-canvas {
   position: fixed;
   top: 0; left: 0;
@@ -169,9 +152,7 @@ p { line-height: 1.8; }
   opacity: 0.4;
 }
 
-/* ---------------------------------------------------------------
-   NAVIGATION
---------------------------------------------------------------- */
+
 .site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -190,7 +171,7 @@ p { line-height: 1.8; }
   transform: translateY(-100%);
 }
 
-/* Top bar */
+
 .header-top-bar {
   background: rgba(10, 31, 60, 0.6);
   backdrop-filter: blur(10px);
@@ -217,7 +198,7 @@ p { line-height: 1.8; }
 
 .header-contact-info i { color: var(--sky); margin-right: 6px; }
 
-/* Logo */
+
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -263,7 +244,7 @@ p { line-height: 1.8; }
   color: var(--sky);
 }
 
-/* Main Nav */
+
 .main-navbar {
   background: transparent;
   padding: 0;
@@ -303,7 +284,7 @@ p { line-height: 1.8; }
   transform: scaleX(1);
 }
 
-/* Dropdown */
+
 .main-navbar .dropdown-menu {
   background: rgba(10, 31, 60, 0.95);
   backdrop-filter: blur(20px);
@@ -331,7 +312,7 @@ p { line-height: 1.8; }
   padding-left: 28px;
 }
 
-/* Nav Auth */
+
 .nav-auth-btns {
   display: flex;
   align-items: center;
@@ -377,7 +358,7 @@ p { line-height: 1.8; }
   color: var(--white);
 }
 
-/* Dark mode toggle */
+
 .dark-toggle-wrap {
   display: flex;
   align-items: center;
@@ -414,7 +395,7 @@ p { line-height: 1.8; }
 #dark-mode-toggle:checked + .dark-toggle-track { background: var(--sky); }
 #dark-mode-toggle:checked + .dark-toggle-track::after { transform: translateX(18px); }
 
-/* Hamburger */
+
 .navbar-toggler {
   border: 1px solid var(--glass-border) !important;
   border-radius: var(--radius-sm) !important;
@@ -449,7 +430,7 @@ p { line-height: 1.8; }
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobile Nav */
+
 @media (max-width: 991px) {
   .main-navbar .navbar-collapse {
     background: rgba(10, 31, 60, 0.97);
@@ -478,9 +459,7 @@ p { line-height: 1.8; }
   .nav-auth-btns { padding: 16px 24px; border-top: 1px solid rgba(255,255,255,0.08); }
 }
 
-/* ---------------------------------------------------------------
-   HERO SECTION  CINEMATIC FULLSCREEN
---------------------------------------------------------------- */
+
 .hero-section {
   position: relative;
   height: 100vh;
@@ -616,7 +595,7 @@ p { line-height: 1.8; }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Hero Buttons */
+
 .btn-hero-primary {
   display: inline-flex;
   align-items: center;
@@ -679,7 +658,7 @@ p { line-height: 1.8; }
   color: var(--white);
 }
 
-/* Hero Scroll Indicator */
+
 .hero-scroll-indicator {
   position: absolute;
   bottom: 40px;
@@ -726,7 +705,7 @@ p { line-height: 1.8; }
   color: rgba(255,255,255,0.5);
 }
 
-/* Hero Slide Dots */
+
 .hero-dots {
   position: absolute;
   right: 40px;
@@ -753,9 +732,7 @@ p { line-height: 1.8; }
   transform: scale(1.4);
 }
 
-/* ---------------------------------------------------------------
-   SECTION HEADINGS
---------------------------------------------------------------- */
+
 .section-label {
   display: inline-flex;
   align-items: center;
@@ -791,15 +768,13 @@ p { line-height: 1.8; }
   line-height: 1.8;
 }
 
-/* Light sections */
+
 .section-light .section-title { color: var(--ocean); }
 .section-light .section-label { color: var(--sunset-warm); }
 .section-light .section-label::before { background: var(--sunset-warm); }
 .section-light .section-subtitle { color: rgba(10,31,60,0.65); }
 
-/* ---------------------------------------------------------------
-   PAGE SECTIONS
---------------------------------------------------------------- */
+
 .section-ocean   { background: var(--ocean); }
 .section-dark    { background: #050f1e; }
 .section-mid     { background: var(--ocean-mid); }
@@ -808,16 +783,14 @@ p { line-height: 1.8; }
 
 .section-pad { padding: var(--section-pad); }
 
-/* Gradient dividers */
+
 .section-divider {
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--sky), var(--sunset), transparent);
   opacity: 0.3;
 }
 
-/* ---------------------------------------------------------------
-   GLASSMORPHISM CARDS
---------------------------------------------------------------- */
+
 .glass-card {
   background: var(--glass);
   border: 1px solid var(--glass-border);
@@ -835,7 +808,7 @@ p { line-height: 1.8; }
   border-color: rgba(58,173,218,0.4);
 }
 
-/* 3D Tilt Card */
+
 .tilt-card {
   transform-style: preserve-3d;
   transform: perspective(1000px);
@@ -863,9 +836,7 @@ p { line-height: 1.8; }
 
 .tilt-card:hover .tilt-card-shine { opacity: 1; }
 
-/* ---------------------------------------------------------------
-   DESTINATION CARDS
---------------------------------------------------------------- */
+
 .dest-card {
   position: relative;
   border-radius: var(--radius-md);
@@ -962,9 +933,7 @@ p { line-height: 1.8; }
 
 .dest-card-link:hover { gap: 14px; color: var(--sunset); }
 
-/* ---------------------------------------------------------------
-   DESTINATION POPUP MODAL
---------------------------------------------------------------- */
+
 body.modal-open {
   overflow: hidden;
 }
@@ -1167,9 +1136,7 @@ body.modal-open {
   margin-bottom: 4px;
 }
 
-/* ---------------------------------------------------------------
-   FEATURED CAROUSEL
---------------------------------------------------------------- */
+
 .carousel-wrap {
   position: relative;
   overflow: hidden;
@@ -1209,9 +1176,7 @@ body.modal-open {
 .carousel-nav.prev { left: -24px; }
 .carousel-nav.next { right: -24px; }
 
-/* ---------------------------------------------------------------
-   TESTIMONIALS
---------------------------------------------------------------- */
+
 .testimonial-card {
   background: var(--glass);
   border: 1px solid var(--glass-border);
@@ -1283,9 +1248,7 @@ body.modal-open {
   margin-bottom: 16px;
 }
 
-/* ---------------------------------------------------------------
-   FESTIVAL CARDS
---------------------------------------------------------------- */
+
 .festival-card {
   position: relative;
   border-radius: var(--radius-md);
@@ -1347,9 +1310,7 @@ body.modal-open {
   color: rgba(255,255,255,0.7);
 }
 
-/* ---------------------------------------------------------------
-   PHOTO GALLERY GRID
---------------------------------------------------------------- */
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1471,9 +1432,7 @@ body.modal-open {
   .gallery-collage .tile-small { grid-column: span 1; grid-row: span 2; }
 }
 
-/* ---------------------------------------------------------------
-   NEWSLETTER SECTION
---------------------------------------------------------------- */
+
 .newsletter-section {
   background: linear-gradient(135deg, var(--ocean-mid) 0%, rgba(240,124,44,0.15) 100%);
   border-radius: var(--radius-lg);
@@ -1537,9 +1496,7 @@ body.modal-open {
   box-shadow: 0 8px 30px rgba(240,124,44,0.5);
 }
 
-/* ---------------------------------------------------------------
-   FOOTER
---------------------------------------------------------------- */
+
 .site-footer {
   background: #050f1e;
   border-top: 1px solid rgba(255,255,255,0.06);
@@ -1642,9 +1599,7 @@ body.modal-open {
 
 .footer-bottom a { color: var(--sky); }
 
-/* ---------------------------------------------------------------
-   BREADCRUMB
---------------------------------------------------------------- */
+
 .site-breadcrumb {
   background: rgba(10, 31, 60, 0.5);
   backdrop-filter: blur(10px);
@@ -1670,9 +1625,7 @@ body.modal-open {
 .breadcrumb-item.active { color: var(--white); }
 .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,0.3); }
 
-/* ---------------------------------------------------------------
-   PAGE HERO (subpage hero)
---------------------------------------------------------------- */
+
 .page-hero {
   position: relative;
   height: 55vh;
@@ -1731,9 +1684,7 @@ body.modal-open {
   max-width: 500px;
 }
 
-/* ---------------------------------------------------------------
-   CONTENT CARDS (generic)
---------------------------------------------------------------- */
+
 .content-card {
   background: var(--glass);
   border: 1px solid var(--glass-border);
@@ -1807,14 +1758,12 @@ body.modal-open {
 
 .content-card .card-link:hover { gap: 12px; }
 
-/* Light card variant */
+
 .content-card.card-light { background: var(--white); border-color: rgba(0,0,0,0.08); }
 .content-card.card-light .card-title { color: var(--ocean); }
 .content-card.card-light .card-text { color: rgba(10,31,60,0.65); }
 
-/* ---------------------------------------------------------------
-   BUTTONS (global)
---------------------------------------------------------------- */
+
 .btn-primary-ocean {
   display: inline-flex;
   align-items: center;
@@ -1887,9 +1836,7 @@ body.modal-open {
   color: var(--white);
 }
 
-/* ---------------------------------------------------------------
-   SCROLL ANIMATIONS
---------------------------------------------------------------- */
+
 .fade-in {
   opacity: 0;
   transform: translateY(32px);
@@ -1922,7 +1869,7 @@ body.modal-open {
 
 .fade-scale.visible { opacity: 1; transform: scale(1); }
 
-/* Stagger delays */
+
 .delay-1 { transition-delay: 0.1s; }
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
@@ -1930,9 +1877,7 @@ body.modal-open {
 .delay-5 { transition-delay: 0.5s; }
 .delay-6 { transition-delay: 0.6s; }
 
-/* ---------------------------------------------------------------
-   PARALLAX
---------------------------------------------------------------- */
+
 .parallax-section {
   position: relative;
   overflow: hidden;
@@ -1946,9 +1891,7 @@ body.modal-open {
   will-change: transform;
 }
 
-/* ---------------------------------------------------------------
-   LIGHTBOX
---------------------------------------------------------------- */
+
 #lightbox-overlay {
   position: fixed;
   inset: 0;
@@ -2023,9 +1966,7 @@ body.modal-open {
 #lightbox-prev { left: 20px; }
 #lightbox-next { right: 20px; }
 
-/* ---------------------------------------------------------------
-   BACK TO TOP
---------------------------------------------------------------- */
+
 #back-to-top {
   position: fixed;
   bottom: 30px; right: 30px;
@@ -2056,9 +1997,7 @@ body.modal-open {
   box-shadow: 0 10px 30px rgba(58,173,218,0.6);
 }
 
-/* ---------------------------------------------------------------
-   COOKIE BANNER
---------------------------------------------------------------- */
+
 #cookie-banner {
   position: fixed;
   bottom: -120px;
@@ -2120,9 +2059,7 @@ body.modal-open {
 
 #cookie-decline:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
 
-/* ---------------------------------------------------------------
-   TOAST
---------------------------------------------------------------- */
+
 .toast-msg {
   position: fixed;
   bottom: 28px;
@@ -2151,9 +2088,7 @@ body.modal-open {
 .toast-msg.success { border-color: #2ecc71; }
 .toast-msg.error   { border-color: #e74c3c; }
 
-/* ---------------------------------------------------------------
-   DARK MODE
---------------------------------------------------------------- */
+
 body.dark-mode {
   --ocean: #030b18;
   --off-white: #e8f4fc;
@@ -2165,9 +2100,7 @@ body.dark-mode .content-card.card-light { background: #0a1e35; border-color: rgb
 body.dark-mode .content-card.card-light .card-title { color: var(--white); }
 body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6); }
 
-/* ---------------------------------------------------------------
-   FORM STYLES
---------------------------------------------------------------- */
+
 .form-group { margin-bottom: 20px; }
 
 .form-label {
@@ -2219,7 +2152,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   min-height: 14px;
 }
 
-/* Password strength */
+
 .pw-strength-bar-wrap {
   height: 4px;
   background: rgba(255,255,255,0.1);
@@ -2235,7 +2168,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   transition: width 0.35s, background 0.35s;
 }
 
-/* Multi-step form */
+
 .step-indicators {
   display: flex;
   justify-content: center;
@@ -2256,9 +2189,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
 .form-step { display: none; }
 .form-step.active { display: block; }
 
-/* ---------------------------------------------------------------
-   COUNTDOWN TIMER
---------------------------------------------------------------- */
+
 .countdown-wrap {
   display: flex;
   gap: 20px;
@@ -2302,9 +2233,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   font-weight: 700;
 }
 
-/* ---------------------------------------------------------------
-   FLOATING ANIMATIONS
---------------------------------------------------------------- */
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50%       { transform: translateY(-12px); }
@@ -2330,7 +2259,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
 .float-slow { animation: floatSlow 6s ease-in-out infinite; }
 .glow-pulse { animation: pulse-glow 3s ease-in-out infinite; }
 
-/* Animated gradient text */
+
 .gradient-text {
   background: linear-gradient(270deg, var(--sky), var(--sunset), var(--gold), var(--sky));
   background-size: 200% auto;
@@ -2340,9 +2269,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   animation: gradientShift 4s linear infinite;
 }
 
-/* ---------------------------------------------------------------
-   MAP EMBED
---------------------------------------------------------------- */
+
 .map-container {
   position: relative;
   border-radius: var(--radius-md);
@@ -2359,9 +2286,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   filter: hue-rotate(200deg) contrast(0.9) brightness(0.85);
 }
 
-/* ---------------------------------------------------------------
-   SEARCH BAR
---------------------------------------------------------------- */
+
 .search-bar-wrap {
   max-width: 560px;
   margin: 0 auto 48px;
@@ -2394,9 +2319,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   pointer-events: none;
 }
 
-/* ---------------------------------------------------------------
-   TABS
---------------------------------------------------------------- */
+
 .custom-tabs {
   display: flex;
   gap: 4px;
@@ -2430,9 +2353,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
 .tab-content-panel { display: none; }
 .tab-content-panel.active { display: block; }
 
-/* ---------------------------------------------------------------
-   TIPS / INFO BOXES
---------------------------------------------------------------- */
+
 .info-box {
   background: var(--glass);
   border: 1px solid var(--glass-border);
@@ -2465,9 +2386,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   margin: 0;
 }
 
-/* ---------------------------------------------------------------
-   ACCORDION (FAQ)
---------------------------------------------------------------- */
+
 .custom-accordion .accordion-item {
   background: var(--glass);
   border: 1px solid var(--glass-border);
@@ -2502,9 +2421,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   padding: 0 24px 24px;
 }
 
-/* ---------------------------------------------------------------
-   PAGE TRANSITIONS
---------------------------------------------------------------- */
+
 .page-transition {
   position: fixed;
   inset: 0;
@@ -2534,9 +2451,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   to   { transform: scaleY(1); }
 }
 
-/* ---------------------------------------------------------------
-   RESPONSIVE UTILITIES
---------------------------------------------------------------- */
+
 @media (max-width: 1200px) {
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-grid .gallery-item:first-child { grid-row: span 1; }
@@ -2638,9 +2553,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   .cd-number { font-size: 34px; }
 }
 
-/* ---------------------------------------------------------------
-   UTILITIES
---------------------------------------------------------------- */
+
 .text-sky    { color: var(--sky) !important; }
 .text-sunset { color: var(--sunset) !important; }
 .text-gold   { color: var(--gold) !important; }
@@ -2664,9 +2577,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   display: none;
 }
 
-/* ---------------------------------------------------------------
-   SIGN IN / SIGN UP PAGES
---------------------------------------------------------------- */
+
 .auth-page {
   min-height: 100vh;
   display: flex;
@@ -2721,9 +2632,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   background: rgba(255,255,255,0.1);
 }
 
-/* ---------------------------------------------------------------
-   INTERACTIVE MAP PLACEHOLDER
---------------------------------------------------------------- */
+
 .tourist-map-placeholder {
   height: 500px;
   background: var(--ocean-mid);
@@ -2745,9 +2654,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
               radial-gradient(ellipse at 70% 60%, rgba(240,124,44,0.08), transparent 60%);
 }
 
-/* ---------------------------------------------------------------
-   VIDEO GALLERY
---------------------------------------------------------------- */
+
 .video-card {
   position: relative;
   border-radius: var(--radius-md);
@@ -2800,9 +2707,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   border-color: var(--sunset);
 }
 
-/* ---------------------------------------------------------------
-   PLAN YOUR TRIP STEPS
---------------------------------------------------------------- */
+
 .trip-step {
   display: flex;
   gap: 20px;
@@ -2847,9 +2752,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   margin: 0;
 }
 
-/* ---------------------------------------------------------------
-   NEWS CARDS
---------------------------------------------------------------- */
+
 .news-card {
   background: var(--glass);
   border: 1px solid var(--glass-border);
@@ -2875,9 +2778,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
 .news-date .day { font-family: var(--font-display); font-size: 28px; font-weight: 700; line-height: 1; }
 .news-date .month { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; }
 
-/* ---------------------------------------------------------------
-   EVENTS
---------------------------------------------------------------- */
+
 .event-item {
   display: flex;
   align-items: center;
@@ -2911,9 +2812,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
 .event-info h4 { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
 .event-info p { font-size: 12px; color: rgba(255,255,255,0.55); margin: 0; }
 
-/* ---------------------------------------------------------------
-   HOTELS / RESORTS
---------------------------------------------------------------- */
+
 .hotel-card {
   background: var(--glass);
   border: 1px solid var(--glass-border);
@@ -2990,9 +2889,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
 
 .hotel-price span { font-size: 12px; font-family: var(--font-body); color: rgba(255,255,255,0.45); font-weight: 400; }
 
-/* ---------------------------------------------------------------
-   ADVENTURE / ACTIVITIES
---------------------------------------------------------------- */
+
 .activity-card {
   position: relative;
   height: 300px;
@@ -3048,9 +2945,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   color: var(--gold);
 }
 
-/* ---------------------------------------------------------------
-   CUISINE SECTION
---------------------------------------------------------------- */
+
 .cuisine-card {
   background: var(--glass);
   border: 1px solid var(--glass-border);
@@ -3086,9 +2981,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   line-height: 1.7;
 }
 
-/* ---------------------------------------------------------------
-   CONTACT PAGE
---------------------------------------------------------------- */
+
 .contact-info-item {
   display: flex;
   gap: 16px;
@@ -3111,9 +3004,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
 .contact-detail h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--sky); margin-bottom: 4px; }
 .contact-detail p  { font-size: 14px; color: rgba(255,255,255,0.7); margin: 0; }
 
-/* ---------------------------------------------------------------
-   SPOT DETAIL PAGE
---------------------------------------------------------------- */
+
 .spot-gallery-row {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -3133,9 +3024,7 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   grid-row: span 2;
 }
 
-/* ---------------------------------------------------------------
-   TRANSPORTATION
---------------------------------------------------------------- */
+
 .transport-card {
   background: var(--glass);
   border: 1px solid var(--glass-border);
@@ -3170,4 +3059,5 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   color: rgba(255,255,255,0.6);
   line-height: 1.7;
 }
+
 

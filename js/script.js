@@ -1,39 +1,8 @@
-﻿/* ================================================================
-   ILOCOS NORTE TOURISM  script.js
-   Features:
-   01. Loading Screen
-   02. Floating Particles
-   03. Scroll Progress Bar
-   04. Sticky Header + Hide on Scroll Down
-   05. Hero Slideshow with Crossfade
-   06. Typewriter Effect
-   07. Hero Stats Bar
-   08. Scroll Triggered Animations (IntersectionObserver)
-   09. Animated Counters
-   10. 3D Card Tilt on Mousemove
-   11. Parallax Scrolling
-   12. Lightbox Image Viewer
-   13. Featured Destinations Carousel
-   14. Live Search / Filter
-   15. Dark Mode Toggle
-   16. Cookie Banner
-   17. Toast Notifications
-   18. Back to Top Button
-   19. Countdown Timer (Pamulinawen Festival)
-   20. Form Validation + Password Strength
-   21. Multi-step Signup Form
-   22. Smooth Page Transitions
-   23. Custom Tabs
-   24. Newsletter Form
-   25. Testimonials Slider
-   26. Gallery Masonry Hover
-================================================================ */
+﻿
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  /* ============================================================
-     01. LOADING SCREEN
-  ============================================================ */
+  
   (function () {
     var screen = document.getElementById('loading-screen');
     if (!screen) return;
@@ -53,9 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     02. FLOATING PARTICLES CANVAS
-  ============================================================ */
+  
   (function () {
     var canvas = document.getElementById('particles-canvas');
     if (!canvas) return;
@@ -131,9 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     03. SCROLL PROGRESS BAR
-  ============================================================ */
+  
   (function () {
     var bar = document.getElementById('progress-bar');
     if (!bar) return;
@@ -147,9 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     04. STICKY HEADER  Shrink + Hide on scroll down
-  ============================================================ */
+  
   (function () {
     var header = document.querySelector('.site-header');
     var topBar = document.querySelector('.header-top-bar');
@@ -179,9 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     05. HERO SLIDESHOW (crossfade)
-  ============================================================ */
+  
   (function () {
     var slides = document.querySelectorAll('.hero-bg-slide');
     var dots   = document.querySelectorAll('.hero-dot');
@@ -215,9 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     06. TYPEWRITER EFFECT
-  ============================================================ */
+  
   (function () {
     var el = document.querySelector('.hero-typewriter');
     if (!el) return;
@@ -265,9 +224,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     08. SCROLL TRIGGERED ANIMATIONS
-  ============================================================ */
+  
   (function () {
     var animEls = document.querySelectorAll('.fade-in, .fade-left, .fade-right, .fade-scale');
 
@@ -289,9 +246,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     09. ANIMATED COUNTERS
-  ============================================================ */
+  
   (function () {
     var counters = document.querySelectorAll('[data-count]');
     if (!counters.length) return;
@@ -322,9 +277,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     10. 3D CARD TILT ON MOUSEMOVE
-  ============================================================ */
+  
   (function () {
     var tiltCards = document.querySelectorAll('.tilt-card');
 
@@ -363,9 +316,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     11. PARALLAX SCROLLING
-  ============================================================ */
+  
   (function () {
     var parallaxEls = document.querySelectorAll('.parallax-bg');
     if (!parallaxEls.length) return;
@@ -383,9 +334,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     12. LIGHTBOX
-  ============================================================ */
+  
   (function () {
     var overlay  = document.getElementById('lightbox-overlay');
     var img      = document.getElementById('lightbox-img');
@@ -440,9 +389,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     13. CAROUSEL (Destination Cards)
-  ============================================================ */
+  
   (function () {
     var carousels = document.querySelectorAll('.carousel-wrap');
 
@@ -496,9 +443,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     14. LIVE SEARCH / FILTER
-  ============================================================ */
+  
   (function () {
     var searchInput = document.getElementById('dest-search');
     if (!searchInput) return;
@@ -543,9 +488,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     DESTINATION DETAILS POPUP
-  ============================================================ */
+  
   (function () {
     var triggers = document.querySelectorAll('[data-spot]');
     if (!triggers.length) return;
@@ -808,9 +751,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   })();
 
-  /* ============================================================
-     15. DARK MODE TOGGLE
-  ============================================================ */
+  
   (function () {
     var toggle = document.getElementById('dark-mode-toggle');
     if (!toggle) return;
@@ -828,9 +769,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     16. COOKIE BANNER
-  ============================================================ */
+  
   (function () {
     var banner  = document.getElementById('cookie-banner');
     var accept  = document.getElementById('cookie-accept');
@@ -848,9 +787,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     17. TOAST NOTIFICATIONS
-  ============================================================ */
+  
   window.showToast = function (msg, type, duration) {
     var existing = document.querySelector('.toast-msg');
     if (existing) existing.remove();
@@ -873,9 +810,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
 
-  /* ============================================================
-     18. BACK TO TOP
-  ============================================================ */
+  
   (function () {
     var btn = document.getElementById('back-to-top');
     if (!btn) return;
@@ -894,9 +829,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     19. COUNTDOWN TIMER (Pamulinawen Festival  Feb 10 next year)
-  ============================================================ */
+  
   (function () {
     var wrap = document.getElementById('countdown-timer');
     if (!wrap) return;
@@ -937,9 +870,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     20. FORM VALIDATION + PASSWORD STRENGTH
-  ============================================================ */
+  
   (function () {
     // Email validation
     document.querySelectorAll('input[type="email"]').forEach(function (input) {
@@ -995,9 +926,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     21. MULTI-STEP SIGNUP FORM
-  ============================================================ */
+  
   (function () {
     var steps   = document.querySelectorAll('.form-step');
     var dots    = document.querySelectorAll('.step-dot');
@@ -1032,9 +961,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     22. SMOOTH PAGE TRANSITIONS
-  ============================================================ */
+  
   (function () {
     var overlay = document.querySelector('.page-transition');
     if (!overlay) return;
@@ -1058,9 +985,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     23. CUSTOM TABS
-  ============================================================ */
+  
   (function () {
     document.querySelectorAll('.custom-tab').forEach(function (tab) {
       tab.addEventListener('click', function () {
@@ -1078,9 +1003,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     24. NEWSLETTER FORM
-  ============================================================ */
+  
   (function () {
     var form = document.getElementById('newsletter-form');
     if (!form) return;
@@ -1098,9 +1021,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     GALLERY CATEGORY FILTER
-  ============================================================ */
+  
   (function () {
     var gallery = document.getElementById('photo-gallery');
     if (!gallery) return;
@@ -1172,9 +1093,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     25. TESTIMONIALS SLIDER
-  ============================================================ */
+  
   (function () {
     var slides = document.querySelectorAll('.testimonial-slide');
     if (slides.length < 2) return;
@@ -1199,9 +1118,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     26. CONTACT FORM
-  ============================================================ */
+  
   (function () {
     var form = document.getElementById('contact-form');
     if (!form) return;
@@ -1223,9 +1140,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 
-  /* ============================================================
-     ACTIVE NAV LINK
-  ============================================================ */
+  
   (function () {
     var page = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.main-navbar .nav-link, .main-navbar .dropdown-item').forEach(function (link) {
@@ -1247,4 +1162,5 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 }); // DOMContentLoaded
+
 
