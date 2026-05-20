@@ -1,8 +1,8 @@
-/* ================================================================
-   ILOCOS NORTE TOURISM — Premium Cinematic Design System
+﻿/* ================================================================
+   ILOCOS NORTE TOURISM  Premium Cinematic Design System
    Stack: HTML5 + CSS3 + Bootstrap 5 + Vanilla JS
-   Color Palette: Deep Ocean Blue · Sunset Orange · Sand Beige
-   Aesthetic: Glassmorphism · Luxury · Cinematic · Modern Filipino
+   Color Palette: Deep Ocean Blue  Sunset Orange  Sand Beige
+   Aesthetic: Glassmorphism  Luxury  Cinematic  Modern Filipino
 ================================================================ */
 
 /* ---------------------------------------------------------------
@@ -479,7 +479,7 @@ p { line-height: 1.8; }
 }
 
 /* ---------------------------------------------------------------
-   HERO SECTION — CINEMATIC FULLSCREEN
+   HERO SECTION  CINEMATIC FULLSCREEN
 --------------------------------------------------------------- */
 .hero-section {
   position: relative;
@@ -3170,3 +3170,4 @@ body.dark-mode .content-card.card-light .card-text { color: rgba(255,255,255,0.6
   color: rgba(255,255,255,0.6);
   line-height: 1.7;
 }
+

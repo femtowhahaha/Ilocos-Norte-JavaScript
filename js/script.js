@@ -1,5 +1,5 @@
-/* ================================================================
-   ILOCOS NORTE TOURISM — script.js
+﻿/* ================================================================
+   ILOCOS NORTE TOURISM  script.js
    Features:
    01. Loading Screen
    02. Floating Particles
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   /* ============================================================
-     04. STICKY HEADER — Shrink + Hide on scroll down
+     04. STICKY HEADER  Shrink + Hide on scroll down
   ============================================================ */
   (function () {
     var header = document.querySelector('.site-header');
@@ -895,7 +895,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   /* ============================================================
-     19. COUNTDOWN TIMER (Pamulinawen Festival — Feb 10 next year)
+     19. COUNTDOWN TIMER (Pamulinawen Festival  Feb 10 next year)
   ============================================================ */
   (function () {
     var wrap = document.getElementById('countdown-timer');
@@ -949,7 +949,7 @@ document.addEventListener('DOMContentLoaded', function () {
         this.classList.toggle('invalid', !valid && this.value.length > 0);
         var msg = this.closest('.form-group') && this.closest('.form-group').querySelector('.field-msg');
         if (msg) {
-          msg.textContent = this.value.length === 0 ? '' : (valid ? '✓ Valid email' : '✗ Enter a valid email');
+          msg.textContent = this.value.length === 0 ? '' : (valid ? ' Valid email' : ' Enter a valid email');
           msg.style.color = valid ? '#2ecc71' : '#e74c3c';
         }
       });
@@ -1173,3 +1173,4 @@ document.addEventListener('DOMContentLoaded', function () {
   })();
 
 }); // DOMContentLoaded
+
