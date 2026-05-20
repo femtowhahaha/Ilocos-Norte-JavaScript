@@ -1099,6 +1099,80 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   /* ============================================================
+     GALLERY CATEGORY FILTER
+  ============================================================ */
+  (function () {
+    var gallery = document.getElementById('photo-gallery');
+    if (!gallery) return;
+
+    var tabs = document.querySelectorAll('[data-tab-group] .custom-tab');
+    if (!tabs.length) return;
+
+    var categoryByImage = {
+      'paoay_church.jpg': 'g-heritage',
+      'cape_bojeador.jpg': 'g-heritage',
+      'laoag_cathedral.jpeg': 'g-heritage',
+      'malacanang.jpg': 'g-heritage',
+      'marcos_museum.jpg': 'g-heritage',
+      'abel_iloco.jpg': 'g-culture',
+      'kannawidan.jpg': 'g-culture',
+      'festival2.jpg': 'g-culture',
+      'festival3.jpg': 'g-culture',
+      'pamulinawen.jpg': 'g-culture',
+      'food-empanada.avif': 'g-culture',
+      'bagnet.jpg': 'g-culture',
+      'dinuguan.jpg': 'g-culture',
+      'dinengdeng.jpg': 'g-culture',
+      'longganisa.jpg': 'g-culture',
+      'pinakbet.jpg': 'g-culture',
+      'saud_beach.jpg': 'g-beach',
+      'bluelagoon.jpg': 'g-beach',
+      'banguibeach.jpg': 'g-beach',
+      'pagudpud.jpg': 'g-beach',
+      'patapat.jpg': 'g-nature',
+      'kapurpurawan.jpg': 'g-nature',
+      'sandunes.jpg': 'g-nature',
+      'sandboarding.jpg': 'g-nature',
+      'timangtang.jpg': 'g-nature',
+      'tobacco_fields.jpg': 'g-nature',
+      'north_ilocos.jpg': 'g-nature',
+      'paoay_lake.jpg': 'g-nature',
+      'windfarm.webp': 'g-nature',
+      'bangui_windmills.jpg': 'g-nature',
+      'horse_riding.jpg': 'g-nature',
+      'hania.webp': 'g-nature',
+      'burnay.jpg': 'g-culture',
+      'laoag.jpg': 'g-heritage',
+      'santa_monica.jpg': 'g-heritage'
+    };
+
+    var cards = Array.prototype.slice.call(gallery.querySelectorAll('.gallery-item'));
+    var items = cards.map(function (card) {
+      var src = (card.getAttribute('data-src') || '').split('/').pop().toLowerCase();
+      var category = categoryByImage[src] || 'g-nature';
+      var container = card.closest('.col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-6');
+      return { card: card, container: container, category: category };
+    }).filter(function (item) { return !!item.container; });
+
+    function applyCategory(category) {
+      items.forEach(function (item) {
+        var show = category === 'g-all' || item.category === category;
+        item.container.style.display = show ? '' : 'none';
+      });
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var category = this.getAttribute('data-tab') || 'g-all';
+        applyCategory(category);
+      });
+    });
+
+    applyCategory('g-all');
+  })();
+
+
+  /* ============================================================
      25. TESTIMONIALS SLIDER
   ============================================================ */
   (function () {
