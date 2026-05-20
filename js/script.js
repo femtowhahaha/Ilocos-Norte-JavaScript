@@ -843,7 +843,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function dismiss() { banner.classList.remove('visible'); }
 
-    accept  && accept.addEventListener('click',  function () { localStorage.setItem('iln-cookie','1'); dismiss(); showToast('Welcome! Enjoy exploring Ilocos Norte 🌊', 'success'); });
+    accept  && accept.addEventListener('click',  function () { localStorage.setItem('iln-cookie','1'); dismiss(); showToast('Welcome! Enjoy exploring Ilocos Norte.', 'success'); });
     decline && decline.addEventListener('click',  function () { localStorage.setItem('iln-cookie','0'); dismiss(); });
   })();
 
@@ -1093,7 +1093,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
       input.value = '';
-      showToast('Thank you for subscribing! Welcome to Ilocos Norte. 🌊', 'success');
+      showToast('Thank you for subscribing! Welcome to Ilocos Norte.', 'success');
     });
   })();
 
@@ -1143,7 +1143,7 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.textContent = orig;
         btn.disabled = false;
         form.reset();
-        showToast('Message sent! We\'ll get back to you soon. 📬', 'success');
+        showToast('Message sent! We\'ll get back to you soon.', 'success');
       }, 1500);
     });
   })();

@@ -159,53 +159,66 @@
         <div class="glass-card p-5">
           <h3 style="font-family:var(--font-display);color:var(--white);margin-bottom:4px;">Send Us a Message</h3>
           <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:28px;">Fill out the form and our team will respond within 24 hours on business days.</p>
-          <form id="contact-form">
+          <form id="inquiry-form" novalidate>
             <div class="row g-3">
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-group">
-                  <label class="form-label">First Name *</label>
-                  <input type="text" class="form-input" placeholder="Juan" required>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="form-label">Last Name *</label>
-                  <input type="text" class="form-input" placeholder="dela Cruz" required>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="form-label">Email Address *</label>
-                  <input type="email" class="form-input" placeholder="juan@email.com" required>
+                  <label class="form-label" for="full-name">Full Name *</label>
+                  <input type="text" id="full-name" name="full_name" class="form-input" placeholder="Juan dela Cruz" required>
                   <span class="field-msg"></span>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label class="form-label">Phone Number</label>
-                  <input type="tel" class="form-input" placeholder="+63 9XX XXX XXXX">
+                  <label class="form-label" for="email-address">Email Address *</label>
+                  <input type="email" id="email-address" name="email" class="form-input" placeholder="juan@email.com" required>
+                  <span class="field-msg"></span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="form-label" for="contact-number">Contact Number *</label>
+                  <input type="tel" id="contact-number" name="contact_number" class="form-input" placeholder="639123456789" inputmode="numeric" required>
+                  <span class="field-msg"></span>
                 </div>
               </div>
               <div class="col-12">
                 <div class="form-group">
-                  <label class="form-label">Subject *</label>
-                  <select class="form-input" required>
-                    <option value="">Select a subject...</option>
-                    <option>Trip Planning Inquiry</option>
-                    <option>Hotel &amp; Accommodation</option>
-                    <option>Festival &amp; Events</option>
-                    <option>Transportation Assistance</option>
-                    <option>Media &amp; Press</option>
-                    <option>Tourism Partnership</option>
-                    <option>General Inquiry</option>
-                    <option>Feedback &amp; Suggestions</option>
+                  <label class="form-label" for="destination">Destination *</label>
+                  <select id="destination" name="destination" class="form-input" required>
+                    <option value="">Select a destination...</option>
+                    <option value="paoay-church">Paoay Church</option>
+                    <option value="bangui-windmills">Bangui Windmills</option>
+                    <option value="kapurpurawan">Kapurpurawan Rock Formation</option>
+                    <option value="saud-beach">Saud Beach</option>
+                    <option value="cape-bojeador">Cape Bojeador Lighthouse</option>
+                    <option value="la-paz-sand-dunes">La Paz Sand Dunes</option>
+                    <option value="blue-lagoon">Blue Lagoon</option>
+                    <option value="laoag-city">Laoag City</option>
+                    <option value="timmangtang-rock">Timmangtang Rock</option>
                   </select>
+                  <span class="field-msg"></span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="form-label" for="travel-date">Travel Date *</label>
+                  <input type="date" id="travel-date" name="travel_date" class="form-input" required>
+                  <span class="field-msg"></span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="form-label" for="visitors">Number of Visitors *</label>
+                  <input type="number" id="visitors" name="visitors" class="form-input" min="1" step="1" placeholder="1" required>
+                  <span class="field-msg"></span>
                 </div>
               </div>
               <div class="col-12">
                 <div class="form-group">
-                  <label class="form-label">Message *</label>
-                  <textarea class="form-input" rows="5" placeholder="Write your message here..." required></textarea>
+                  <label class="form-label" for="inquiry-message">Message *</label>
+                  <textarea id="inquiry-message" name="message" class="form-input" rows="5" placeholder="Write your message here..." required></textarea>
+                  <span class="field-msg"></span>
                 </div>
               </div>
               <div class="col-12">
@@ -316,5 +329,6 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/inquiry-validation.js"></script>
 </body>
 </html>
